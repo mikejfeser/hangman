@@ -2,10 +2,7 @@
 #
 
 # -----------------------------------
-# Helper code
-# You don't need to understand this helper code,
-# but you will have to know how to use the functions
-# (so be sure to read the docstrings!)
+
 
 import random
 
@@ -36,7 +33,6 @@ def chooseWord(wordlist):
     """
     return random.choice(wordlist)
 
-# end of helper code
 # -----------------------------------
 
 # Load the list of words into the variable wordlist
@@ -50,7 +46,6 @@ def isWordGuessed(secretWord, lettersGuessed):
     returns: boolean, True if all the letters of secretWord are in lettersGuessed;
       False otherwise
     '''
-    # FILL IN YOUR CODE HERE...
     letterDict = {}
     for char in secretWord:
         letterDict[char] = 1
@@ -72,7 +67,6 @@ def getGuessedWord(secretWord, lettersGuessed):
     returns: string, comprised of letters and underscores that represents
       what letters in secretWord have been guessed so far.
     '''
-    # FILL IN YOUR CODE HERE...
     hint = []
     stringHint = ''
     letterDict = {}
@@ -100,7 +94,6 @@ def getAvailableLetters(lettersGuessed):
     returns: string, comprised of letters that represents what letters have not
       yet been guessed.
     '''
-    # FILL IN YOUR CODE HERE...
     import string
     
     stringAvail = ''
@@ -136,7 +129,6 @@ def hangman(secretWord):
 
     Follows the other limitations detailed in the problem write-up.
     '''
-    # FILL IN YOUR CODE HERE...
     print('Welcome to the game, Hangman!')
     print('I am thinking of a word that is', len(secretWord), 'letters long.')
     
@@ -176,5 +168,5 @@ def hangman(secretWord):
 
 
 secretWord = chooseWord(wordlist).lower()
-#secretWord = 'escort'
+
 hangman(secretWord)
